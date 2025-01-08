@@ -49,7 +49,7 @@ public partial class ManageCustomers : ContentPage
 
         //Methods that read/write from DB must be in DB class and called with DB object
         List<Customer> customers = dbAccess.FetchAllCustomers(); // Fetch the list of customers
-                                                                 // Set picker item source to list of customers
+        customerPicker.ItemsSource = null;                                                         // Set picker item source to list of customers
         customerPicker.ItemsSource = customers;
         //display the string line FullDetails from EACH object in Customer Class/Reservation Class
         customerPicker.ItemDisplayBinding = new Binding("FullDetails");
